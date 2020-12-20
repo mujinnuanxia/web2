@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>商品评价</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        *{
+    padding:0;
+    margin:0;
+}
+ul,li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+.container{
+    width: 100%;
+    height: 1150px;
+}
+.cover1{
+    height:50px;
+    width: 100%;
+    background-color: #f4f4f4;
+
+}
+.top1{
+    height: 40px;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+ .table{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: center;
+ }
+.nav2{
+    width: 1200px;
+    margin: 0 auto;
+}
+ .nav2 li{
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 50px;
+}
+.nav2 > li > a{
+    color: #7D7D7D;
+    
+}
+.nav2 > li:hover{
+    background: #FFFFFF;
+}
+.nav2 > li:hover > a{
+    color: #FF4400;
+}
+ .hide2{
+    display: none;
+    background: #f4f4f4;
+}
+.hide2 a{
+    color: #7D7D7D;
+}
+.nav2 li:hover .hide2{
+    display: block;
+
+}
+.hide2 li:hover{
+    background:#ffffff ; 
+}
+.hide2 a:hover{
+    color: #FF4400;
+}
+
+.middle{
+    width: 100%;
+    height: 1000px;
+    margin-top: 10px;
+}
+
+.mid{
+    width: 1200px;
+    height: 1000px;
+    margin: 0px auto;
+    border: 2px solid rgb(255,68,0);
+}
+.bangbangkuaixun1{
+    width:1200px;
+    height:600px;
+    position: relative;  /*保证在盒子里固定*/
+    overflow: hidden;  /*保证不出大盒子*/
+    border-bottom: solid 1px #ebeae7;
+}
+/*轮播部分*/
+body{
+    
+    height: 600px;
+}
+#ul {
+    list-style: none;
+    width: 1200px;
+    height: 640px; /* 是本盒子高度的二倍*/
+    position: absolute;  /*让每一个公告都动起来*/
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#ul::after {
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#ul li {
+   width: 1200px;
+   height: 100px; 
+   float: top;
+}
+#ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    color:#000;
+}
+.bigger{
+    width: 1200px;
+    height:300px;
+    margin-top: 20px;
+}
+.b1{
+    width: 200px;
+    height: 200px;
+    background: url(images/g1.jpg) no-repeat center;
+    float: left;
+    margin-right: 50px;
+}
+.b2{
+    width: 200px;
+    height: 200px;
+    background: url(images/1.jpg) no-repeat center;
+    float: left;
+    margin-right: 30px;
+}
+.b3{
+    width: 200px;
+    height: 200px;
+    background: url(images/w1.jpg) no-repeat center;
+    float: left;
+    margin-right: 30px;
+}
+.b4{
+    width: 200px;
+    height: 200px;
+    background: url(images/w2.jpg) no-repeat center;
+    float: left;
+    margin-right: 30px;
+}
+.b5{
+    width: 200px;
+    height: 200px;
+    background: url(images/w3.jpg) no-repeat center;
+    float: left;
+}
+
+.pj{
+    width: 1200px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 20px;
+    margin: 0 auto;
+    float: left;
+    padding-left: 500px;
+}
+.pj a{
+     color: rgb(255,68,0);
+}
+
+.lef{
+    width: 100px;
+    position: fixed;
+    left: 0px;
+    top: 200px;
+    float: left;
+}
+.lef li{
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #F9277A;
+    border-bottom: 1px solid #fff;
+}
+.lef li a{
+    color: #fff;
+}
+
+
+.rig{
+    position: absolute;
+    width: 100px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.rig li{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 15px;
+    background-color:#F9277A;
+}
+.rights a{
+    color: white;
+}
+.n1{
+    top: 200px;
+    right: 0px;
+    position: fixed;
+}
+.n2{
+    top: 240px;
+    right: -100px;
+    position: fixed;
+}
+.n3{
+    top: 280px;
+    right: -100px;
+    position: fixed;
+}
+.n4{
+    top: 320px;
+    right: -100px;
+    position: fixed;
+}
+.n5{
+    top: 360px;
+    right: -100px;
+    position: fixed;
+}
+.n6{
+    top: 400px;
+    right: -100px;
+    position: fixed;
+}
+.rights li:hover{
+    right: 0px;
+} 
+
+.last{
+    width: 1200px;
+    height:100px;
+    border-bottom: 2px solid #454545;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+ .nav4 li{
+    font-size: 16px;
+    float: left;
+    width: 100px;
+    height: 30px;
+}
+.nav4 a{
+    color: #7D7D7D;
+    
+}
+.nav4 li:hover{
+    background: #FFFFFF;
+
+}
+.nav4 a:hover{
+    color: #FF4400;
+}
+ .nav5 li{
+    font-size: 16px;
+    float: left;
+    width: 100px;
+    height: 30px;
+}
+.nav5 a{
+    color: #7D7D7D;
+    
+}
+.nav5 li:hover{
+    background: #FFFFFF;
+
+}
+.nav5 a:hover{
+    color: #FF4400;
+}
+.phone{
+    width: 1200px;
+    height:100px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #7D7D7D; 
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cover1">           
+                <div class="top1">
+                    <div class="table">
+                        <ul class="nav2">
+                            <li><a href="#">爱豆首页</a></li>
+                            <li><a href="#">我的爱豆▼</a></li>
+                                <ul class="hide2">
+                                    <li><a href="#">已买的宝贝</a>
+                                    <li><a href="#">我的爱豆足迹</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">购物车 </a>5
+                                <ul class="hide2">
+                                    <li><a href="#">王一博同款包</a></li>
+                                    <li><a href="#">佳洁士</a></li>
+                                    <li><a href="#">卫衣</a></li>
+                                    <li><a href="#">马丁靴</a></li>
+                                    <li><a href="#">帽子</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">收藏夹</a></li>
+                            <li><a href="#">商品分类</a></li>
+                            <li><a href="#">千牛卖家中心</a>
+                                <ul class="hide2">
+                                    <li><a href="#">免费开店</a></li>
+                                    <li><a href="#">已卖出的宝贝</a></li>
+                                    <li><a href="#">出售中的宝贝</a></li>
+                                    <li><a href="#">买家服务市场</a></li>
+                                    <li><a href="#">卖家培训中心</a></li>
+                                    <li><a href="#">体检中心</a></li>
+                                    <li><a href="#">问商友</a></li>                   
+                                </ul>
+                            </li>
+                            <li><a href="#">联系客服▼</a>
+                                <ul class="hide2">
+                                    <li><a href="#">消费者客服</a></li>
+                                    <li><a href="#">卖家客服</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">网站导航▼</a>
+                                <ul class="hide2">
+                                    <li><a href="#">主题市场</a></li>
+                                    <li><a href="#">特色市场</a></li>
+                                    <li><a href="#">阿里app</a></li>
+                                    <li><a href="#">精彩推荐集</a></li>
+                                </ul>
+                            </li>
+                        </ul>                  
+                    </div>
+                </div>           
+            </div>
+
+            <div class="middle">
+                <ul class="lef">
+                    <li><a href="#">个人中心</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">我的收藏夹</a></li>
+                    <li><a href="#">关注店铺</a></li>
+                    <li><a href="#">红包卡券</a></li>
+                </ul>
+                <div class="mid"> 
+                    <div class="bangbangkuaixun1">
+                        <ul id="ul">
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                             <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                             <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">A发表评论:<br/>衣服收到了，迫不及待的就试穿了一下，感觉还可以
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">B发表评论:<br/>一开始买大了 换了小一号的 客服小姐姐态度超级好 没两天换的都已经寄来了 虽然不是很厚 但是很抗风 颜色比直播间要暗一点 也很好看 质量很好
+                                </a>
+                            </li>
+                        </ul>
+            </div>
+                    <div class="bigger">
+                        <div class="b1">
+                        </div>
+                        <div class="b2">
+                        </div>
+                        <div class="b3">
+                        </div>
+                        <div class="b4">
+                        </div>
+                         <div class="b5">
+                        </div>
+                        <div class="pj">
+                        <a href="https://drunkcao.github.io/bigwork/">我去评价-></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧浮窗 -->
+                <div class="rig" style=" opacity:13;">
+                    <ul class="rights">
+                        <li class="n1"><a href="#">爱逛好货</a></li>
+                        <li class="n2"><a href="#">好店直播</a></li>
+                        <li class="n3"><a href="#">品质特色</a></li>
+                        <li class="n4"><a href="#">猜你喜欢</a></li>
+                        <li class="n5"><a href="#">评论反馈</a></li>
+                        <li class="n6"><a href="#">举报中心</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="last">
+                <ul class="nav4">
+                    <li><a href="#">阿里巴巴集团 </a></li>
+                    <li><a href="#">淘宝网</a></li>
+                    <li><a href="#">天猫</a></li>
+                    <li><a href="#">聚划算</a></li>
+                    <li><a href="#">全球速卖通</a></li>
+                    <li><a href="#">1688</a></li>
+                    <li><a href="#">阿里妈妈</a></li>
+                    <li><a href="#">飞猪</a></li>
+                    <li><a href="#">阿里云计算</a></li>
+                    <li><a href="#">AliOS</a></li>
+                    <li><a href="#">阿里通信</a></li>
+                    <li><a href="#">一淘</a></li>
+                    <li><a href="#">万网</a></li>
+                    <li><a href="#">高德</a></li>
+                    <li><a href="#">UC</a></li>
+                    <li><a href="#">友盟</a></li>
+                </ul>
+                </br>
+                <ul class="nav5">
+                    <li><a href="#">虾米</a></li>
+                    <li><a href="#">大麦网</a></li>
+                    <li><a href="#">钉钉</a></li>
+                    <li><a href="#">支付宝</a></li>
+                    <li><a href="#">优酷</a></li>
+                    <li><a href="#">土豆</a></li>
+                    <li><a href="#">阿里健康</a></li>
+                    <li><a href="#">阿里影业</a></li>
+                    <li><a href="#">阿里体育</a></li>
+                    <li><a href="#">网商银行</a></li>
+                    <li><a href="#">淘宝台湾</a></li>
+                </ul>
+            </div>
+            <div class="phone">
+                <span>增值电信业务经营许可证：浙B2-20080224</span>&nbsp&nbsp|&nbsp&nbsp<span>增值电信业务经营许可证（跨地区）： B2-20150210</span>&nbsp&nbsp|&nbsp&nbsp<span>浙网文（2019）1033-086号</span>&nbsp&nbsp|&nbsp&nbsp<span>浙江省网络食品销售第三方平台提供者备案：浙网食A33010001</span>
+                &nbsp&nbsp|&nbsp&nbsp<span>
+                互联网药品信息服务资格证书（浙）-经营性-2018-0010</span>&nbsp&nbsp|&nbsp&nbsp<span>短消息类服务接入代码使用证书：号【2016】00154-A01</span>&nbsp&nbsp|&nbsp&nbsp<span>信息网络传播视听许可证：1109364号</span>&nbsp&nbsp|&nbsp&nbsp<span>出版物网络交易平台服务经营备案号：新出发浙备字第002号浙公网安备 33010002000078号 </span>&nbsp&nbsp|&nbsp&nbsp<span>广播电视节目制作经营许可证（浙）字第01012号</span>&nbsp&nbsp|&nbsp&nbsp<span>市场名称登记证：工商网市字3301004120号</span>&nbsp&nbsp|&nbsp&nbsp
+                <span>医疗器械网络交易服务第三方平台备案：（浙）网械平台备字[2018]第00004号
+                </span>
+            </div>
+        </div>
+    </body>
+    <script>
+        // 公告上下滚动
+
+        //ul动起来
+        var ul = document.getElementById("ul");
+
+        function show() {
+            var top = ul.offsetTop - 1; //获取left值
+            ul.style.top = top + "px"; //设置left值
+            //走完一半再返回
+            if (-1 * ul.offsetTop >= ul.offsetHeight / 2) {
+                ul.style.top = 0;
+            }
+        }
+        var t = setInterval(show, 20);
+        //li添加鼠标移入移出事件
+        var li = document.getElementById("ul").getElementsByTagName("li");
+        for (var i = 0; i < li.length; i++) {
+            //移出事件
+            li[i].onmouseout = function () {
+                //不能加 var
+                t = setInterval(show, 20);
+            };
+            //移入事件
+            li[i].onmouseover = function () {
+                clearInterval(t);
+            };
+        }
+    </script>
+</html>
